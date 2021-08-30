@@ -140,6 +140,7 @@ meanO2=total/Area;
 % Area=sum(sum(~isnan(z))); Calculate the relative area for O2 sat
 O2_full=273/1.025/44.661;
 % O2_full=317/1.025/44.661;
+% the surface area on the sphere is different, use cosd to calculate the right one
 percent1=sum(sum((z>=p1*O2_full).*cosd(lat_1)))/Area*1000;
 percent2=sum(sum((z>=p2*O2_full).*cosd(lat_1)))/Area*1000;
 percent3=sum(sum((z>=p3*O2_full).*cosd(lat_1)))/Area*1000;
